@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\TekSoluction\\TekSoluction.csproj": {}
+  },
+  "projects": {
+    "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\CORE.csproj",
+        "projectName": "CORE",
+        "projectPath": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\CORE.csproj",
+        "packagesPath": "C:\\Users\\xavie\\.nuget\\packages\\",
+        "outputPath": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xavie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\TekSoluction\\TekSoluction.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\TekSoluction\\TekSoluction.csproj",
+        "projectName": "TekSoluction",
+        "projectPath": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\TekSoluction\\TekSoluction.csproj",
+        "packagesPath": "C:\\Users\\xavie\\.nuget\\packages\\",
+        "outputPath": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\TekSoluction\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xavie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\CORE.csproj": {
+                "projectPath": "C:\\Reivax\\Repositorios\\PRUEBAS-TECNICAS\\TekSolution\\TekSoluctionAPI\\CORE\\CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

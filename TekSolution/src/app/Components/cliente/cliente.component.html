@@ -1,0 +1,174 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center">TEK SOLUTION</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section mt-3" >
+        <div class="row" >
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title text-center" >Datos del cliente</h5>
+        
+                      <!--  Form -->
+                      <form [formGroup]="formRegistro" 
+                            (ngSubmit)="registroCliente()"
+                            class="row g-3 needs-validation"
+                            >
+                   
+             
+                            <!-- --------------- Nombre Cliente --------------- -->
+                        <div class="col-md-6">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" 
+                                    class="form-control" 
+                                    formControlName="nombre" 
+                                    aria-describedby="inputGroupPrepend" required>
+                            <div class="validatorField"  *ngIf="validarCampos('nombre')">
+                                Este campo es requerido.
+                              </div>
+                        </div>
+        
+                            <!-- --------------- Apellido Cliente --------------- -->               
+                        <div class="col-md-6">  
+                            <label  class="form-label">Apellido</label>
+                            <input  type="text" 
+                                    class="form-control" 
+                                    formControlName="apellido"
+                                    required>
+                                    <div class="validatorField"  *ngIf="validarCampos('apellido')">
+                                        Este campo es requerido.
+                                    </div>
+                        </div>
+        
+             
+        
+                          <!-- --------------- Telefono Cliente --------------- -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Teléfono:
+                            </label> 
+                            <input  
+                            class="form-control"
+                            required
+                            formControlName="telefono"
+                            type="text" 
+                            mask="000-000-0000" 
+                            />
+                            <div class="validatorField"  *ngIf="validarCampos('telefono')">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                        <!-- --------------- Cedula Cliente --------------- -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Cédula:
+                            </label> 
+                            <input  
+                            class="form-control"
+                            required
+                            formControlName="cedula"
+                            type="text" 
+                            mask="000-0000-0000-0" 
+                            />
+                            <div class="validatorField"  *ngIf="validarCampos('cedula')">
+                                Este campo es requerido.
+                            </div>
+                        </div>
+                        <!-- --------------- Provincia Cliente --------------- -->
+                        <div class="col-md-6">
+                          <label  class="form-label">Provincia</label>
+                          <input type="text" 
+                                class="form-control" 
+                                required
+                                formControlName="provincia">
+                                <div class="validatorField"  *ngIf="validarCampos('provincia')">
+                                    Este campo es requerido.
+                                </div>
+                        </div>
+        
+                        <!-- --------------- Sector Cliente --------------- -->
+                        <div class="col-md-6">
+                            <label  class="form-label">Sector</label>
+                            <input type="text" 
+                                    class="form-control" 
+                                    required
+                                    formControlName="sector">
+                                    <div class="validatorField"  *ngIf="validarCampos('sector')">
+                                        Este campo es requerido.
+                                    </div>
+                        </div>
+        
+                        <!-- --------------- Calle Cliente --------------- -->
+                        <div class="col-md-6">
+                          <label class="form-label">Calle</label>
+                          <input type="text" 
+                                class="form-control" 
+                                required
+                                formControlName="calle">
+                                <div class="validatorField"  *ngIf="validarCampos('calle')">
+                                    Este campo es requerido.
+                                </div>
+                        </div>
+        
+                        <!-- --------------- NO. Casa Cliente --------------- -->
+                        <div class="col-md-6">
+                            <label class="form-label">Casa No.</label>
+                            <input type="text"
+                                    class="form-control" 
+                                    required
+                                    formControlName="casaNumero">
+                                    <div class="validatorField"  *ngIf="validarCampos('casaNumero')">
+                                        Este campo es requerido.
+                                    </div>
+                        </div>
+                   
+                        <div class="text-center " >
+                          <button class="btn btn-primary" type="submit" [ngClass]="{'disabled':btnDisable()}">Guardar</button>
+                        </div>
+                       
+                      </form>
+                      <!-- End  Form -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">CLIENTES</h5>
+
+                        <table class="table">
+                            <tbody>
+                                <tr *ngFor="let cliente of clienteLista">
+                                   <td>{{cliente.nombre}}</td> 
+                                   <td>{{cliente.apellido}}</td>
+                                   <td>{{cliente.cedula}}</td> 
+                                   <td>{{cliente.telefono}}</td>
+                                   <td> <a  (click)="getIdCliente( cliente.clienteId)" routerLink="/direcciones/{{
+                                    cliente.clienteId
+                                  }}"
+                                  href="">Ver direcciones</a></td>
+    
+                                    <!-- <td>
+                                        <i  class="far fa-edit text-info"></i>
+                                    </td> -->
+                                    <td >
+                                        <i (click)="eliminarCliente(cliente.clienteId)" class="far fa-trash-alt text-danger"></i>
+                                    </td>
+    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </section>
+        <!-- <app-direccion [idCliente]="idCliente"></app-direccion> -->
+    </div>
